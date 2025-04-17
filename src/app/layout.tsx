@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Resume Builder - For CS and Software Students",
+  title: "coderesume.",
   description: "Create professional and ATS-optimized resumes for tech job applications",
 };
 
