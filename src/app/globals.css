@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 252 75% 7%;
+    --foreground: 0 0% 100%;
+    --card: 252 75% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 252 75% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 270 77% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 30% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 30% 15%;
+    --muted-foreground: 270 10% 70%;
+    --accent: 260 30% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 30% 15%;
+    --input: 260 30% 15%;
+    --ring: 270 77% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--font-plus-jakarta-sans);
+  }
+
+  body {
+    @apply bg-background text-foreground dark;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 md:px-8 max-w-[1320px];
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto;
+  }
+}
+
+.purple-gradient-bg {
+  background: linear-gradient(to bottom, rgba(94, 46, 165, 0.2), rgba(15, 7, 36, 1));
+}
+
+.dark-purple-bg {
+  background-color: #060418;
+}
+
+.feature-card {
+  background: rgba(28, 16, 58, 0.5);
+  border: 1px solid rgba(116, 90, 170, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.blur-circle {
+  filter: blur(70px);
+  opacity: 0.6;
+}
+
+/* Add missing keyframes for animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes background-shine {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes text-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 252 75% 7%;
+    --foreground: 0 0% 100%;
+    --card: 252 75% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 252 75% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 270 77% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 30% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 30% 15%;
+    --muted-foreground: 270 10% 70%;
+    --accent: 260 30% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 30% 15%;
+    --input: 260 30% 15%;
+    --ring: 270 77% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--font-plus-jakarta-sans);
+  }
+
+  body {
+    @apply bg-background text-foreground dark;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 md:px-8 max-w-[1320px];
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto;
+  }
+}
+
+.purple-gradient-bg {
+  background: linear-gradient(to bottom, rgba(94, 46, 165, 0.2), rgba(15, 7, 36, 1));
+}
+
+.dark-purple-bg {
+  background-color: #060418;
+}
+
+.feature-card {
+  background: rgba(28, 16, 58, 0.5);
+  border: 1px solid rgba(116, 90, 170, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.blur-circle {
+  filter: blur(70px);
+  opacity: 0.6;
+}
+
+/* Add missing keyframes for animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes background-shine {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes text-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@font-face {
+  font-family: "Computer Modern";
+  src: url("/fonts/cmunrm.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Computer Modern";
+  src: url("/fonts/cmunbx.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Computer Modern";
+  src: url("/fonts/cmunsl.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
